@@ -8,7 +8,7 @@ import styles from './AndreSmarteUtviklere.module.css';
 export const AndreSmarteUtivklere = () => {
   const context = useContext(AppContext);
 
-  let [count, setCount] = useState(Math.floor(Math.random() * 10000) + 10000);
+  const [count, setCount] = useState(Math.floor(Math.random() * 10000) + 10000);
 
   useEffect(() => {
     setTimeout(() => {
@@ -31,7 +31,7 @@ export const AndreSmarteUtivklere = () => {
         Kapasiteten er begrenset, ikke mist plassen din!
         </p>
       <p>
-      🔥🔥🔥 &nbsp;&nbsp;&nbsp; <ButtonSubmit value="Jeg bryr meg om fremtiden min, og vil motta nyhetsbrev" variant="green" onClick={() => context?.goToPage(1)} /> &nbsp;&nbsp;&nbsp; 🔥🔥🔥
+          🔥🔥🔥 &nbsp;&nbsp;&nbsp; <ButtonSubmit disabled={false} value="Jeg bryr meg om fremtiden min, og vil motta nyhetsbrev" variant="green" onClick={() => context?.goToPage(1)} /> &nbsp;&nbsp;&nbsp; 🔥🔥🔥
       </p>
       <p className={styles.andresmarteutviklere__ingenambisjoner}>
         <ButtonLink value="Jeg har ingen ambisjoner" onClick={() => context?.goToNextPage()} />

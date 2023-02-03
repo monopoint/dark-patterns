@@ -49,7 +49,7 @@ export const AreYouSure = () => {
       </form>
 
       <p className="my-6">
-        <ButtonSubmit value="OK" disabled={false} onClick={() => handleClick()} />
+        <ButtonSubmit value="OK" onClick={() => handleClick()} />
       </p>
 
     </div>

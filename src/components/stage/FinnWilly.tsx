@@ -19,7 +19,7 @@ export const FinnWilly = () => {
         <button
           onClick={() => context?.goToNextPage()}
           className={styles.finnwilly__button}
-          tabIndex="-1"
+          tabIndex={-1}
         >
         </button>
         </div>

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { AppContext } from "../../pages/_app";
 import { ButtonSubmit } from "../atoms/ButtonSubmit"
 import { ButtonLink } from "../atoms/ButtonLink"
@@ -7,12 +7,12 @@ import { Introduction } from "../atoms/Introduction"
 export const ForklarHvorfor = () => {
   const context = useContext(AppContext);
   const [showInput, setShowInput] = useState(false)
-  let [input, setInput] = useState("");
-  let [begrunnelse, setBegrunnelse] = useState("");
-  let [wordcount, setWordcount] = useState(0);
+  const [input, setInput] = useState("");
+  const [begrunnelse, setBegrunnelse] = useState("");
+  const [wordcount, setWordcount] = useState(0);
 
 
-  const handleBegrunnelseChange = (e) => {
+  const handleBegrunnelseChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setBegrunnelse(e.target.value)
     const text = e.target.value;
     const words = text.trim().split(' ')
@@ -40,12 +40,12 @@ export const ForklarHvorfor = () => {
       )}
 
       <label>Bruk tretten ord på å gi en tilbakemelding til Magnus hvor du begrunner hvorfor din tomme innboks er mer verdt enn jobben hans:</label>
-      <textarea rows="10" onChange={handleBegrunnelseChange}>
+      <textarea rows={10} onChange={(e) => handleBegrunnelseChange(e)}>
 
       </textarea>
 
       <p className="my-6">
-        <ButtonSubmit value="Jeg bryr meg bare om meg selv" disabled={input != context.userEmail || wordcount != 13}  onClick={() => context?.goToNextPage()} />
+        <ButtonSubmit value="Jeg bryr meg bare om meg selv" disabled={input != context?.userEmail || wordcount != 13} onClick={() => context?.goToNextPage()} />
       </p>
 
     </div>
