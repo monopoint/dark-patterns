@@ -11,7 +11,7 @@ export const MovingPaddings = () => {
     <div className="centercolumn">
       <marquee>NB: Avmeldingsfunksjonaliteten er noe ustabil for øyeblikket</marquee>
 
-      <img src="oh no" className="w-lg h-24 mt-6 border" alt="Laster avmeldingsprogrammvare" />
+      <img src="oh no" className="w-lg h-24 mt-6 border" alt="Laster avmeldingsprogramvare" />
       <div className={styles.movingpaddings}>
       <div className={styles.movingpaddings}>
       <div className={styles.movingpaddings}>
