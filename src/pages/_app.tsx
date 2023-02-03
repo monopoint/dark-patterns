@@ -5,15 +5,13 @@ import "../styles/globals.css";
 
 const context: {
   page: number;
-  nextPage: Function;
+  nextPage: () => void;
 } = {
   page: 0,
   nextPage: nextPage,
 };
 
 function nextPage() {
-  console.log("in next page");
-  console.log("next page is " + context.page);
   context.page = context.page + 1;
 }
 

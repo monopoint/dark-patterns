@@ -7,7 +7,7 @@ export const Welcome = () => {
 
     const context = useContext(AppContext);
 
-    let [input, setInput] = useState("");
+    const [input, setInput] = useState("");
 
     const handleButtonClick = (): void => {
         context?.setUserEmail(input);

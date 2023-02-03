@@ -8,7 +8,7 @@ export const RememberNumber = () => {
 
   const pin = 379672547;
 
-  let [input, setInput] = useState("");
+  const [input, setInput] = useState("");
 
 
   return (

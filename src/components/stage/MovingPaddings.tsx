@@ -9,6 +9,8 @@ export const MovingPaddings = () => {
 
   return (
     <div className="centercolumn">
+      {/* 
+      @ts-ignore */}
       <marquee>NB: Avmeldingsfunksjonaliteten er noe ustabil for øyeblikket</marquee>
 
       <img src="oh no" className="w-lg h-24 mt-6 border" alt="Laster avmeldingsprogrammvare" />
