@@ -1,0 +1,17 @@
+.takkforpameldelsen {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.takkforpameldelsen__image {
+  background-image: url('/eksperimenteringsvilje.png');
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  background-position: 50% 0%;
+}
+
+.takkforpameldelsen__footer {
+  text-align: center;
+  padding: 2rem;
+}

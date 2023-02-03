@@ -1,0 +1,26 @@
+.andresmarteutviklere__counter {
+  color: white;
+  margin: 4rem 0;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.andresmarteutviklere__choices {
+  text-align: center;
+}
+
+.andresmarteutviklere__ingenambisjoner {
+  opacity: 0.5;
+  margin-top: 3rem;
+}
+
+.andresmarteutviklere__ingenambisjoner button {
+  font-size: 0.875rem;
+}
+.andresmarteutviklere__begrensetplass {
+  margin-bottom: 3rem;
+  font-size: 1.25rem;
+  color: #FF507E;
+  font-weight: 900;
+}

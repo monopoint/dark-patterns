@@ -1,0 +1,7 @@
+.movingpaddings {
+  padding-top: 10px;
+}
+
+.movingpaddings:hover {
+  padding-top: 50px;
+}

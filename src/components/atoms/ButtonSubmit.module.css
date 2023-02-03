@@ -1,0 +1,22 @@
+.buttonsubmit {
+  border: 0;
+  border-radius: 1.75rem;
+  color: white;
+  cursor: default;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.buttonsubmit[disabled] {
+  opacity: 0.5;
+}
+
+.buttonsubmit--default {
+  background-color: #D3335E;
+}
+
+.buttonsubmit--green {
+  background-color: green;
+}

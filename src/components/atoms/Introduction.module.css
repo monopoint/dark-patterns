@@ -1,0 +1,9 @@
+.introduction {
+  background-color: #150023;
+  padding: 2rem;
+  margin: 0 -2rem 2rem -2rem;
+}
+
+.introduction > :last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #27003D;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"], textarea {
+  background-color: #36015B;
+  border: thin solid rgb(255 255 255 / 0.5);
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 1rem 1.25rem;
+  width: 18rem;
+}
+
+textarea {
+  width: 100%;
+}
+
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.centercolumn {
+  margin: 6rem auto;
+  max-width: 40rem;
+  padding: 0 2rem;
+}
+
