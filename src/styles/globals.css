@@ -44,3 +44,7 @@ label {
   padding: 0 2rem;
 }
 
+.centercolumn--centeraligned {
+  text-align: center;
+}
+

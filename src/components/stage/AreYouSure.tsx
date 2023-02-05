@@ -4,12 +4,13 @@ import { checkServerIdentity } from "tls";
 import { AppContext } from "../../pages/_app";
 import { ButtonSubmit } from "../atoms/ButtonSubmit"
 import { Introduction } from "../atoms/Introduction"
+import styles from './AreYouSure.module.css';
 
 export const AreYouSure = () => {
   const context = useContext(AppContext);
 
   function handleClick() {
-    const checkedServices = formRef.current?.querySelectorAll("div>input:checked").length;
+    const checkedServices = formRef.current?.querySelectorAll(".service:checked").length;
     const checkedSubscribe = formRef.current?.querySelectorAll("#subscribe:checked").length;
 
     if (checkedServices === 7 && checkedSubscribe === 0) {
@@ -34,23 +35,34 @@ export const AreYouSure = () => {
       </Introduction>
 
       <form ref={formRef}>
-        <div className="my-6">
-          <h3 className="text-2xl">Velg hvilke tjenester du vil melde deg av</h3>
-          <input type={"checkbox"}></input> Kantegas nyhetsfeed<br />
-          <input type={"checkbox"}></input> Råd og veiledning for studenter<br />
-          <input type={"checkbox"}></input> Nyheter på epost<br />
-          <input type={"checkbox"}></input> Karriereveiledning<br />
-          <input type={"checkbox"}></input> Siste nytt fra Kantega<br />
-          <input type={"checkbox"}></input> Kantegas triks og tips<br />
-          <input type={"checkbox"}></input> Opdateringer om det som skjer<br />
-        </div>
-        <h3 className="text-2xl">Bruk knappen under for å bekrefte at du ikke lenger ønsker å motta nyhetsbrevet</h3>
-        <input type={"checkbox"} id="subscribe"></input> Jeg ønsker ikke lenger å melde meg av nyhetsbrevet<br />
+
+        <fieldset className={styles.areyousure__fieldset}>
+
+          <h3 className={styles.areyousure__header}>Velg hvilke tjenester du vil melde deg av</h3>
+
+          <p className={styles.areyousure__choice}><input className="service" type={"checkbox"} />Kantegas nyhetsfeed</p>
+          <p className={styles.areyousure__choice}><input className="service" type={"checkbox"} />Råd og veiledning for studenter</p>
+          <p className={styles.areyousure__choice}><input className="service" type={"checkbox"} />Nyheter på epost</p>
+          <p className={styles.areyousure__choice}><input className="service" type={"checkbox"} />Karriereveiledning</p>
+          <p className={styles.areyousure__choice}><input className="service" type={"checkbox"} />Siste nytt fra Kantega</p>
+          <p className={styles.areyousure__choice}><input className="service" type={"checkbox"} />Kantegas triks og tips</p>
+          <p className={styles.areyousure__choice}><input className="service" type={"checkbox"} />Oppdateringer om det som skjer</p>
+
+        </fieldset>
+
+        <fieldset className={styles.areyousure__fieldset}>
+
+          <h3 className={styles.areyousure__header}>Bruk knappen under for å bekrefte at du ikke lenger ønsker å motta nyhetsbrevet</h3>
+
+          <p className={styles.areyousure__choice}><input type={"checkbox"} id="subscribe" />Jeg ønsker ikke lenger å melde meg av nyhetsbrevet</p>
+
+        </fieldset>
+
       </form>
 
-      <p className="my-6">
-        <ButtonSubmit value="OK" onClick={() => handleClick()} />
-      </p>
+
+        <ButtonSubmit value="Bekreft" onClick={() => handleClick()} />
+
 
     </div>
   );

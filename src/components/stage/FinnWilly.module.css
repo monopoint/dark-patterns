@@ -1,8 +1,10 @@
 .finnwilly__imagecontainer {
-  background: url(/willy.jpg) no-repeat;
+  background: url(/willy.jpg) no-repeat 100% 0%;
   height: 1226px;
   position: relative;
   width: 1988px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .finnwilly__button {

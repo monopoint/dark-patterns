@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../pages/_app";
 import { ButtonSubmit } from "../atoms/ButtonSubmit"
-import { ButtonLink } from "../atoms/ButtonLink"
 import { Introduction } from "../atoms/Introduction"
 import styles from './AndreSmarteUtviklere.module.css';
 
@@ -27,15 +26,8 @@ export const AndreSmarteUtivklere = () => {
       <p className={styles.andresmarteutviklere__counter}>{count} fremtidsrettede designere har allerede meldt seg på nyhetsbrevet. <br />Vær en del av gjengen!</p>
 
       <div className={styles.andresmarteutviklere__choices}>
-      <p className={styles.andresmarteutviklere__begrensetplass}>
-        Kapasiteten er begrenset, ikke mist plassen din!
-        </p>
-      <p>
-          🔥🔥🔥 &nbsp;&nbsp;&nbsp; <ButtonSubmit disabled={false} value="Jeg bryr meg om fremtiden min, og vil motta nyhetsbrev" variant="green" onClick={() => context?.goToPage(1)} /> &nbsp;&nbsp;&nbsp; 🔥🔥🔥
-      </p>
-      <p className={styles.andresmarteutviklere__ingenambisjoner}>
-        <ButtonLink value="Jeg har ingen ambisjoner" onClick={() => context?.goToNextPage()} />
-      </p>
+            <ButtonSubmit disabled={false} value="Jeg bryr meg om fremtiden min" onClick={() => context?.goToPage(1)} />
+            <ButtonSubmit value="Jeg har ingen ambisjoner" onClick={() => context?.goToNextPage()} />
       </div>
     </div>
   );

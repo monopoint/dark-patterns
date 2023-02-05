@@ -5,3 +5,15 @@
 .movingpaddings:hover {
   padding-top: 50px;
 }
+
+.movingpaddings__marquee {
+  font-size: 2rem;
+  line-height: 1.5;
+  background-color: yellow;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem 0;
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+.areyousure__choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.areyousure__fieldset {
+  margin-bottom: 2rem;
+}
+
+.areyousure__header {
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  font-size: 1.25rem;
+}

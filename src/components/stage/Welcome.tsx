@@ -17,7 +17,6 @@ export const Welcome = () => {
 
     return (
         <div className="centercolumn">
-        <img src="/Kantega_logo_hvit.svg" className="max-w-sm mb-4" />
 
             <h1 className="text-2xl mb-4">Velkommen til Kantegas avmeldingsh*lvete</h1>
             <Introduction>
@@ -33,6 +32,7 @@ export const Welcome = () => {
             <ButtonSubmit value="Trykk her" disabled={!input} onClick={handleButtonClick} />
             </p>
 
+        <img src="/Kantega_logo_hvit.svg" className="max-w-xs mt-24" />
         </div>
     )
 }
