@@ -34,7 +34,7 @@ export const ForklarHvorfor = () => {
 
       { showInput && (
       <p>
-        <label>E-post</label>
+        <label title={context?.userEmail}>E-post <span className="hidden_in_background">{context?.userEmail}</span></label>
         <input type="text" onChange={(e) => setInput(e.target.value)}  /> 
       </p>
       )}

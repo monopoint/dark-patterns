@@ -11,7 +11,7 @@ export const FinnWilly = () => {
       <div className="centercolumn">
         <Introduction>
 
-      <p>Vi må vite at du ikke er en robot. Finn Willy for å gå videre.</p>
+      <p>Vi må vite at du ikke er en robot. Finn <span className={styles.finnwilly__reveal}>Willy <img src="/thumb.png" alt="" className={styles.finnwilly__thumbnail} /></span> i bildet nedenfor for å gå videre.</p>
         </Introduction>
       </div>
         
