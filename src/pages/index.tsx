@@ -59,7 +59,7 @@ const Home: NextPage = () => {
     if (context?.timerIsRunning) {
       setTimeout(() => {
         context.setTime(context.time + 1);
-      }, 750);
+      }, 1000);
     }
   }, [context?.time, context?.timerIsRunning]);
 
