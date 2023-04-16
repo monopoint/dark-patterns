@@ -30,14 +30,23 @@ function Konkurranseskjema() {
   const [nickname, setNickname] = useState("");
 
   const handleButtonClick = (): void => {
-    if (typeof window !== "undefined" && scoreboard){
+    if (typeof window !== "undefined" && scoreboard && context){
+
+      // Don't save if worse than previous best:
+      const previousBest = scoreboard[email];
+      if (previousBest && previousBest.time <= context.time) {
+        context.goToNextPage();
+        return;
+      }
+
+      // Save score
       scoreboard[email] = {
         nickname: nickname,
-        time: context?.time || 0,
+        time: context.time || 0,
       }
 
       localStorage.setItem("scoreboard", JSON.stringify(scoreboard));
-      context?.goToNextPage();
+      context.goToNextPage();
     }
   }
 
