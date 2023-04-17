@@ -33,7 +33,7 @@ export type Context = {
 export const AppContext = createContext<Context | null>(null);
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(7);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [time, setTime] = useState(0);

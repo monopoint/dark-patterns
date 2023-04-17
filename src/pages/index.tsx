@@ -11,11 +11,12 @@ import { MovingPaddings } from "../components/stage/MovingPaddings";
 import { RememberNumber } from "../components/stage/RememberNumber";
 import { Ferdig } from "../components/stage/Ferdig";
 import { AreYouSure } from "../components/stage/AreYouSure";
+import {Resultatliste} from "../components/stage/Resultatliste";
 
 const Home: NextPage = () => {
   const context = useContext(AppContext);
 
-  let stepComponent = <Welcome />;
+  let stepComponent;
 
   switch (context?.page) {
     case 1:
@@ -42,6 +43,9 @@ const Home: NextPage = () => {
     case 8:
       stepComponent = <Ferdig />;
       break;
+    case 9:
+      stepComponent = <Resultatliste />;
+      break;
     default:
       stepComponent = <Welcome />;
       break;
@@ -51,7 +55,8 @@ const Home: NextPage = () => {
     context.setTime(0);
   }
 
-  if (context?.page == 1 && !context.timerIsRunning) {
+  // "context?.page < 8" is only relevant during testing
+  if (context && context?.page > 0 && context?.page < 8 && !context.timerIsRunning) {
     context.startTimer();
   }
 
@@ -61,7 +66,7 @@ const Home: NextPage = () => {
         context.setTime(context.time + 1);
       }, 1000);
     }
-  }, [context?.time, context?.timerIsRunning]);
+  }, [context, context?.time, context?.timerIsRunning]);
 
 
 
