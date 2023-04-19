@@ -27,7 +27,7 @@ export function Konkurranseskjema() {
       // Don't save if worse than previous best:
       const previousBest = scoreboard[email];
       if (previousBest && previousBest.time <= context.time) {
-        context.goToNextPage();
+        context.goToPage(0);
         return;
       }
 
@@ -39,7 +39,7 @@ export function Konkurranseskjema() {
       }
 
       localStorage.setItem("scoreboard", JSON.stringify(scoreboard));
-      context.goToNextPage();
+      context.goToPage(0);
     }
   }
 
