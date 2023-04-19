@@ -4,6 +4,7 @@ import {ButtonSubmit} from "./ButtonSubmit";
 import type {Scoreboard} from "../../types";
 import {Simulate} from "react-dom/test-utils";
 import input = Simulate.input;
+import styles from "./Konkurransesjema.module.css"
 
 export function Konkurranseskjema() {
   const context = useContext(AppContext);
@@ -44,10 +45,18 @@ export function Konkurranseskjema() {
   }
 
   return (
-    <div>
+    <div className="text-left">
       <p>Husk å fylle inn kontaktinfo, så du kan haven på Topplista, og være med i trekningen av fete premier.</p>
-      <input type="text" placeholder="noen@domene.no" onChange={(e) => setEmail(e.target.value)}/>
-      <input type="text" placeholder="Navn eller kallenavn" onChange={(e) => setNickname(e.target.value)}/>
+      <div className={styles.konkurranseskjema__input_wrapper}>
+        <div className={styles.konkurranseskjema__input}>
+          <p>Epost:</p>
+          <input type="text" placeholder="noen@domene.no" onChange={(e) => setEmail(e.target.value)}/>
+        </div>
+        <div className={styles.konkurranseskjema__input}>
+          <p>Navn eller kallenavn:</p>
+          <input type="text" placeholder="Navn eller kallenavn" onChange={(e) => setNickname(e.target.value)}/>
+        </div>
+      </div>
       <p>Vi sletter all info så raskt som mulig etter at vinnere er trukket og kontaktet. Du får ingen nyhetsbrev, vi
         lover!</p>
       <ButtonSubmit value="Trykk her" disabled={!input} onClick={handleButtonClick}/>
