@@ -1,0 +1,38 @@
+.toppliste__h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.toppliste__logo {
+  width: 10rem;
+  display: block;
+  margin: 5rem auto;
+}
+
+.toppliste__player {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px white solid;
+
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.toppliste__player > p {
+  margin: 2% 0 1% 0;
+}
+
+/*.toppliste__player::after {*/
+/*  content: " ";*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  height: 1px;*/
+/*  background: white;*/
+/*  width: 30%;*/
+/*  left: 35%;*/
+/*  top: calc(50% - 2px);*/
+/*}*/

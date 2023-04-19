@@ -11,39 +11,43 @@ import { MovingPaddings } from "../components/stage/MovingPaddings";
 import { RememberNumber } from "../components/stage/RememberNumber";
 import { Ferdig } from "../components/stage/Ferdig";
 import { AreYouSure } from "../components/stage/AreYouSure";
+import {Toppliste} from "../components/stage/Toppliste";
 
 const Home: NextPage = () => {
   const context = useContext(AppContext);
 
-  let stepComponent = <Welcome />;
+  let stepComponent;
 
   switch (context?.page) {
     case 1:
-      stepComponent = <TakkForPameldelsen />;
+      stepComponent = <Welcome/>;
       break;
     case 2:
-      stepComponent = <AndreSmarteUtivklere />;
+      stepComponent = <TakkForPameldelsen />;
       break;
     case 3:
-      stepComponent = <FinnWilly />;
+      stepComponent = <AndreSmarteUtivklere />;
       break;
     case 4:
-      stepComponent = <ForklarHvorfor />;
+      stepComponent = <FinnWilly />;
       break;
     case 5:
-      stepComponent = <MovingPaddings />;
+      stepComponent = <ForklarHvorfor />;
       break;
     case 6:
-      stepComponent = <RememberNumber />;
+      stepComponent = <MovingPaddings />;
       break;
     case 7:
-      stepComponent = <AreYouSure />
+      stepComponent = <RememberNumber />;
       break;
     case 8:
+      stepComponent = <AreYouSure />
+      break;
+    case 9:
       stepComponent = <Ferdig />;
       break;
     default:
-      stepComponent = <Welcome />;
+      stepComponent = <Toppliste />;
       break;
   }
 
@@ -51,7 +55,7 @@ const Home: NextPage = () => {
     context.setTime(0);
   }
 
-  if (context?.page == 1 && !context.timerIsRunning) {
+  if (context && context?.page > 1 && context?.page < 9 && !context.timerIsRunning) {
     context.startTimer();
   }
 
@@ -61,7 +65,7 @@ const Home: NextPage = () => {
         context.setTime(context.time + 1);
       }, 1000);
     }
-  }, [context?.time, context?.timerIsRunning]);
+  }, [context, context?.time, context?.timerIsRunning]);
 
 
 

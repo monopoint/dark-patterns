@@ -1,0 +1,16 @@
+.konkurranseskjema__input_wrapper{
+    width: 104%;
+    display: flex;
+    margin: 1.5rem 0;
+}
+
+.konkurranseskjema__input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+}
+
+.konkurranseskjema__input_wrapper p {
+    margin: 0;
+}
