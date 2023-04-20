@@ -25,14 +25,3 @@
 .toppliste__player > p {
   margin: 2% 0 1% 0;
 }
-
-/*.toppliste__player::after {*/
-/*  content: " ";*/
-/*  display: block;*/
-/*  position: absolute;*/
-/*  height: 1px;*/
-/*  background: white;*/
-/*  width: 30%;*/
-/*  left: 35%;*/
-/*  top: calc(50% - 2px);*/
-/*}*/
