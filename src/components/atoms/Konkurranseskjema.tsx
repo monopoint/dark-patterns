@@ -46,7 +46,7 @@ export function Konkurranseskjema() {
 
   return (
     <div className="text-left">
-      <p>Husk å fylle inn kontaktinfo, så du kan haven på Topplista, og være med i trekningen av fete premier.</p>
+      <p>Husk å fylle inn kontaktinfo, så du kan havne på Topplista, og være med i trekningen av premier 🏆</p>
       <div className={styles.konkurranseskjema__input_wrapper}>
         <div className={styles.konkurranseskjema__input}>
           <p>Epost:</p>
